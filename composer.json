@@ -10,10 +10,14 @@
         }
     ],
     "autoload": {
-        "crystlbrd\\Exceptionist\\": "src/"
+        "psr-4": {
+            "crystlbrd\\Exceptionist\\": "src/"
+        }
     },
     "autoload-dev": {
-        "crystlbrd\\Exceptionist\\Tests\\": "tests/"
+        "psr-4": {
+            "crystlbrd\\Exceptionist\\Tests\\": "tests/"
+        }
     },
     "require": {
         "php": ">=7.3"
