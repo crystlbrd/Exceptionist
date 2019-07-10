@@ -33,12 +33,10 @@ trait ExceptionistTrait
         $debugInfo = $trace[1];
 
         // Always log the exception
-        $this->ExceptionistLog[] = [
-            'function' => $debugInfo['function'],
-            'line' => $debugInfo['line'],
+        $this->ExceptionistLog[] = array_merge($debugInfo, [
             'level' => $level,
             'exception' => $exception
-        ];
+        ]);
 
         // throw exception, if its level is high enough
         if ($level >= $this->ExceptionistReportingLevel) {
