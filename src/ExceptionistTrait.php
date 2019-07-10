@@ -13,7 +13,7 @@ trait ExceptionistTrait
     /**
      * @var array saves exceptions internally
      */
-    private $ExeptionistLog = [];
+    private $ExceptionistLog = [];
 
     /**
      * @var int level of exception reporting
@@ -33,7 +33,7 @@ trait ExceptionistTrait
         $debugInfo = $trace[1];
 
         // Always log the exception
-        $this->ExeptionistLog[] = [
+        $this->ExceptionistLog[] = [
             'function' => $debugInfo['function'],
             'line' => $debugInfo['line'],
             'level' => $level,
@@ -54,7 +54,7 @@ trait ExceptionistTrait
     private function getLogs(int $level = Environment::E_LEVEL_DEBUG): array
     {
         $result = [];
-        foreach ($this->ExeptionistLog as $log) {
+        foreach ($this->ExceptionistLog as $log) {
             if ($log['level'] >= $level) {
                 $result[] = $log;
             }
@@ -69,6 +69,6 @@ trait ExceptionistTrait
      */
     private function getLastLog(): array
     {
-        return $this->ExeptionistLog[(count($this->ExeptionistLog) - 1)];
+        return $this->ExceptionistLog[(count($this->ExceptionistLog) - 1)];
     }
 }
