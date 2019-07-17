@@ -49,13 +49,13 @@ class ExceptionistTestCase extends TestCase
         $this->ExceptionistLog = [];
     }
 
-    protected function getExceptionistLogs($level = Environment::E_LEVEL_DEBUG)
+    protected function getLogs($level = Environment::E_LEVEL_DEBUG)
     {
-        return $this->getLogs($level);
+        return $this->getExceptionistLogs($level);
     }
 
-    public function getLastExceptionistLog()
+    public function getLastLog()
     {
-        return $this->getLastLog();
+        return $this->getLastExceptionistLog();
     }
 }

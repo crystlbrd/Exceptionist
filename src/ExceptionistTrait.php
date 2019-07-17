@@ -49,7 +49,7 @@ trait ExceptionistTrait
      * @param int $level
      * @return array
      */
-    private function getLogs(int $level = Environment::E_LEVEL_DEBUG): array
+    private function getExceptionistLogs(int $level = Environment::E_LEVEL_DEBUG): array
     {
         $result = [];
         foreach ($this->ExceptionistLog as $log) {
@@ -65,7 +65,7 @@ trait ExceptionistTrait
      * Gets the last logged exception
      * @return array
      */
-    private function getLastLog(): array
+    private function getLastExceptionistLog(): array
     {
         return $this->ExceptionistLog[(count($this->ExceptionistLog) - 1)];
     }
