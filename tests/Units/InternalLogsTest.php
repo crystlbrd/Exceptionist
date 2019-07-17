@@ -25,15 +25,15 @@ class InternalLogsTest extends ExceptionistTestCase
         $this->throwAllExceptions();
 
         // Check, if all exceptions have been logged
-        $this->assertEquals(4, count($this->getExceptionistLogs(Environment::E_LEVEL_DEBUG)));
+        $this->assertEquals(4, count($this->getLogs(Environment::E_LEVEL_DEBUG)));
 
         // Now count down
-        $this->assertEquals(3, count($this->getExceptionistLogs(Environment::E_LEVEL_INFO)));
-        $this->assertEquals(2, count($this->getExceptionistLogs(Environment::E_LEVEL_WARNING)));
-        $this->assertEquals(1, count($this->getExceptionistLogs(Environment::E_LEVEL_ERROR)));
-        $this->assertEquals(0, count($this->getExceptionistLogs(Environment::E_LEVEL_NONE)));
+        $this->assertEquals(3, count($this->getLogs(Environment::E_LEVEL_INFO)));
+        $this->assertEquals(2, count($this->getLogs(Environment::E_LEVEL_WARNING)));
+        $this->assertEquals(1, count($this->getLogs(Environment::E_LEVEL_ERROR)));
+        $this->assertEquals(0, count($this->getLogs(Environment::E_LEVEL_NONE)));
 
         // Check the last one
-        $this->assertEquals(Environment::E_LEVEL_ERROR, $this->getLastExceptionistLog()['level']);
+        $this->assertEquals(Environment::E_LEVEL_ERROR, $this->getLastLog()['level']);
     }
 }
