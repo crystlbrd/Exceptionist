@@ -1,6 +1,6 @@
 # Exceptionist
 
-Exceptionist tries to provide more control over which exceptions are thrown without losing any important information. It's providing a simple logging mechanism for object to save all there exceptions and control which one of those should actually be thrown when executed. 
+Exceptionist tries to provide more control over which exceptions are thrown without losing any important information. It's providing a simple logging mechanism for objects to save all its exceptions and control which one of those should actually be thrown when the object is executed. 
 
 ## Requirements
 
