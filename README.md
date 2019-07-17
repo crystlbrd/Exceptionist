@@ -22,4 +22,4 @@ Download the zip or clone the repository into the directory you want Exceptionis
 
 ## Getting started
  
- (coming soon)
+For more details to [how to use Exceptionist](https://github.com/crystlbrd/Exceptionist/wiki/getting-started) please visit the [wiki](https://github.com/crystlbrd/Exceptionist/wiki)
